@@ -16,7 +16,7 @@ Create a local environment with python, then allow the ipykernel to create a ker
 python3 -m venv lchain
 source lchain/bin/activate
 # For windows you must use the following command to activate the virtual environment
-#  .\skernel\Scripts\activate 
+#  .\lchain\Scripts\activate 
 ```
 
 you can handle requirements with easy thanks to pip
@@ -30,7 +30,7 @@ Then you can create a kernel for jupyter notebooks using the very same environmn
 
 ```bash
 pip install ipykernel
-python -m ipykernel install --user --name=lchain_experiments
+python -m ipykernel install --user --name=lchain
 ```
 
 Kernel can be removed using 
