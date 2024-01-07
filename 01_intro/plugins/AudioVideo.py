@@ -12,7 +12,7 @@ class AudioVideo:
         :param videofile: Full path to the mp4 file 
         :return: full path to the extracted audio file
         """
-        print(f"Extracting auio file from video {videofile}")
+        print(f"Extracting audio file from video {videofile}")
         # first of all change the extension to the video file to create output path
         audio_path = videofile.replace(".mp4", ".wav")
         
@@ -34,12 +34,13 @@ class AudioVideo:
         contains for each line the start and end time of the audio segment and the
         transcripted text.
         :param audiofile: Full path to the wav file 
-        :return: transcripted text with start and end time
+        :return: full transcription of the audio file
         """
         print(f"Extracting transcript from audio file {audiofile}")
-        model = whisper.load_model("small.en")
+        model = whisper.load_model("tiny.en")
 
         transcription_options = {
+            "verbose": False,
             "task": "transcribe",
             "prompt": "You will transcribe the video to generate timeline for youtube"  # Add your prompt here
         }
